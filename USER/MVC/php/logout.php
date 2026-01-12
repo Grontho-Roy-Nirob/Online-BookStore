@@ -17,3 +17,16 @@ setcookie("username", "", time() - 3600, "/");
 <div class="container">
     <p id="logout-message">You have been logged out. Redirecting to dashboard...</p>
 </div>
+
+<script>
+window.onload = function() {
+    var logoutMsg = document.getElementById("logout-message");
+    if (logoutMsg) {
+        setTimeout(function() {
+            window.location.href = '../php/index.php';
+        }, 1000); 
+    }
+};
+</script>
+</body>
+</html>
