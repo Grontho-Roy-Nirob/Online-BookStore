@@ -135,3 +135,25 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <button type="submit">Login</button>
     </form>
+
+    <?php
+    if (!empty($successMessage)) {
+        echo "<p class='successmsg'>$successMessage</p>";
+    }
+
+    if (!empty($errorMessage)) {
+        echo "<p class='errormsg'>$errorMessage</p>";
+    }
+    ?>
+    
+    <p style="margin-top:8px;">
+        <a href="forgot_password.php">Forgot Password?</a>
+    </p>
+
+    <p class="register-text">
+        Not registered yet? <a href="../php/register.php">Register here</a>
+    </p>
+</div>
+
+</body>
+</html>
