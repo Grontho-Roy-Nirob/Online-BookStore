@@ -102,3 +102,36 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="../Css/login.css"> 
+</head>
+<body>
+
+<div class="container">
+    <h1>Login</h1>
+
+    <?php
+    if (!empty($loginRedirectMsg)) {
+    echo "<p class='errormsg'>$loginRedirectMsg</p>";}
+    ?>
+
+    <form method="post" action="">
+        <div class="form-group">
+            <label>Username</label>
+            <input type="text" name="username" value="<?php echo htmlspecialchars($username); ?>">
+            <span class="error"><?php echo $usernameError; ?></span>
+        </div>
+
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" name="password">
+            <span class="error"><?php echo $passwordError; ?></span>
+        </div>
+
+        <button type="submit">Login</button>
+    </form>
