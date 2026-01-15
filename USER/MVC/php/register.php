@@ -88,3 +88,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <input type="submit" value="Register Now">
 </form>
+
+<?php
+if (!empty($valid_username)) {
+    echo '<div class="output">';
+    echo "<h3>Your Input:</h3>";
+    echo "Username: " . $valid_username . "<br>";
+    echo '</div>';
+}
+?>
+
+<p class="success" id="success-msg"><?php echo $success; ?></p>
+<p class="error"><?php echo $error; ?></p>
+
+<script>
+window.onload = function() {
+    var successMsg = document.getElementById("success-msg");
+    if (successMsg && successMsg.textContent.trim() !== "") {
+        setTimeout(function() {
+            window.location.href = '../php/login.php';
+        }, 2000);
+    }
+};
+</script>
+
+</body>
+</html>
