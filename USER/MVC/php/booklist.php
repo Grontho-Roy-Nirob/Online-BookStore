@@ -67,3 +67,39 @@ $result = $conn->query($query);
         <?php } ?>
     <?php } ?>
 </div>
+
+<!-- BOOK LIST -->
+<div class="book-grid">
+<?php if ($result && $result->num_rows > 0) { ?>
+    <?php while ($book = $result->fetch_assoc()) { ?>
+        <div class="book">
+            <img src="../Picture/<?php echo htmlspecialchars($book['image']); ?>" alt="book">
+
+            <h3>
+                <a href="bookdetails.php?id=<?php echo (int)$book['id']; ?>">
+                    <?php echo htmlspecialchars($book['title']); ?>
+                </a>
+            </h3>
+
+            <p><b>Author:</b> <?php echo htmlspecialchars($book['author']); ?></p>
+            <p class="price">৳<?php echo number_format((float)$book['final_price'], 2); ?></p>
+            <p class="status"><?php echo htmlspecialchars($book['status']); ?></p>
+
+            <!-- AJAX Add to Cart -->
+            <form onsubmit="return addToCart(this);">
+                <input type="hidden" name="id" value="<?php echo (int)$book['id']; ?>">
+                <input type="hidden" name="title" value="<?php echo htmlspecialchars($book['title']); ?>">
+                <input type="hidden" name="price" value="<?php echo (float)$book['final_price']; ?>">
+                <button type="submit" class="cart-btn">Add to Cart</button>
+                <p class="cartMsg" style="margin-top:6px; font-size:13px;"></p>
+            </form>
+        </div>
+    <?php } ?>
+<?php } else { ?>
+    <p style="text-align:center; width:100%;">No books found.</p>
+<?php } ?>
+</div>
+
+<script src="../Js/booklistajax.js"></script>
+</body>
+</html>
