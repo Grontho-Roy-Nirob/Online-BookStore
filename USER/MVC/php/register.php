@@ -1,5 +1,6 @@
 <?php
 include "../Db/dbregister.php";
+/** @var mysqli $conn */
 
 $username = $password = "";
 $usernameError = $passwordError = "";
