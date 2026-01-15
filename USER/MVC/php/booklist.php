@@ -26,3 +26,7 @@ if (isset($_GET['category']) && trim($_GET['category']) != "") {
 }
 
 $query .= " ORDER BY id DESC";
+
+/* Fetch books (OOP) */
+$result = $conn->query($query);
+?>
