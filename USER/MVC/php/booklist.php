@@ -53,3 +53,17 @@ $result = $conn->query($query);
         </button>
     </div>
 </form>
+
+<!-- CATEGORY SECTION -->
+<div class="category-section">
+    <a href="booklist.php" class="category-btn">All</a>
+
+    <?php if ($catResult && $catResult->num_rows > 0) { ?>
+        <?php while ($cat = $catResult->fetch_assoc()) { ?>
+            <a href="booklist.php?category=<?php echo (int)$cat['id']; ?>"
+               class="category-btn">
+                <?php echo htmlspecialchars($cat['name']); ?>
+            </a>
+        <?php } ?>
+    <?php } ?>
+</div>
