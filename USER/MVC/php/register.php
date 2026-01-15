@@ -62,3 +62,29 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration</title>
+    <link rel="stylesheet" href="../Css/register.css">
+</head>
+<body>
+
+<h1 align="center">Registration</h1>
+
+<form method="post">
+    <p>
+        Username:<br>
+        <input type="text" name="username" value="<?php echo $username; ?>">
+        <span class="error"><?php echo $usernameError; ?></span>
+    </p>
+
+    <p>
+        Password:<br>
+        <input type="password" name="password">
+        <span class="error"><?php echo $passwordError; ?></span>
+    </p>
+
+    <input type="submit" value="Register Now">
+</form>
