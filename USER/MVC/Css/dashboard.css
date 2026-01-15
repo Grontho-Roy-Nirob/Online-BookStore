@@ -77,3 +77,52 @@ body {
     margin: 20px;
     overflow: hidden;
 }
+
+.banner-content h1 {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.banner-btn {
+    background-color: #4dabf7;
+    color: #fff;
+    padding: 12px 30px;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.banner-btn:hover {
+    background-color: #1e88e5;
+}
+
+/* Search Section */
+.search-section {
+    display: flex;
+    justify-content: center;
+    margin: 30px 0;
+}
+
+.search-container {
+    display: flex;
+    width: 60%;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+.search-bar {
+    width: 100%;
+    padding: 12px 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
