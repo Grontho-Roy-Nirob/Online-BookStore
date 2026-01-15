@@ -178,3 +178,86 @@ body {
     position: relative;
 }
 
+/* Image */
+.book-card img {
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+/* Title */
+.book-card h4 {
+    font-size: 16px;
+    margin: 12px;
+    color: #333;
+}
+
+/* Price */
+.book-card p {
+    font-size: 15px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+
+.old-price {
+    text-decoration: line-through;
+    color: #888;
+    font-size: 14px;
+}
+
+.new-price {
+    color: #007bff;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Sold info */
+.book-card small {
+    display: block;
+    margin-bottom: 5px;
+    color: #777;
+}
+
+/* Button */
+.book-card {
+    width: 220px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.book-card:hover {
+    width: 240px;  
+    height: auto;  
+    border: 2px solid #2575fc;
+    box-shadow: 0 12px 24px rgba(0,0,0,0.25);
+    background-color: #f9faff;
+}
+
+.book-card .btn {
+    display: inline-block;
+    margin: 12px 0 15px;
+    padding: 10px 22px;          
+    background-color: #2575fc;   
+    color: #fff;
+    font-weight: 600;            
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 8px;         
+    border: none;                 
+    cursor: pointer;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16);
+    transition: all 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.book-card .btn:hover {
+    background-color: #1e5edb;  
+    box-shadow: 0 6px 12px rgba(0,0,0,0.25);
+    transform: scale(1.05);         
+}
