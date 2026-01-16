@@ -70,3 +70,21 @@ body {
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 
 }
+
+.logout {
+    float: right;            
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    color: #5a3ea1;
+    text-decoration: none;
+    font-weight: bold;
+    border: 1px solid #5a3ea1;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.logout:hover {
+    background-color: #be141f;
+    color: white;
+}
+
