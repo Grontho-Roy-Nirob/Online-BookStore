@@ -69,6 +69,17 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
                 <h3>Sales Report</h3>
                 <p>View daily, monthly and yearly sales.</p>
             </div>
+
+             <div class="card" id="category-card">
+                <h3>Category Management</h3>
+                <p>Add, edit or delete book categories.</p>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
     
 </body>
 </html>
