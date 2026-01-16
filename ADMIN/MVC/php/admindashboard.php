@@ -47,7 +47,7 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
         <a class="logout" href="../../../USER/MVC/php/logout.php">Logout</a>
     
         <hr>
-        
+
  <div class="cards">
 
             <div class="card" id="user-card">
@@ -55,7 +55,10 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
                 <p>See all users who registered on the website.</p>
             </div>
 
-        
+        <div class="card" id="order-card">
+                <h3>Customer Orders</h3>
+                <p>View all orders placed by customers.</p>
+            </div>
     
 </body>
 </html>
