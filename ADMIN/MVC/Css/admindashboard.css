@@ -7,3 +7,33 @@ body {
 .container {
     width: 100%;
 }
+
+.sidebar {
+    width: 250px;
+    height: 100vh; 
+    background-color: #5a3ea1;
+    padding: 20px;
+    float: left; 
+    box-sizing: border-box;
+}
+
+.sidebar h2 {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #6f52b8; 
+    border-radius: 5px;
+}
+
+.sidebar a:hover {
+    background-color: #8369c7;
+}
