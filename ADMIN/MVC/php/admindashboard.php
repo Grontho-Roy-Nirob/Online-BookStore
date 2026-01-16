@@ -59,6 +59,11 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
                 <h3>Customer Orders</h3>
                 <p>View all orders placed by customers.</p>
             </div>
+
+         <div class="card" id="book-card">
+                <h3>Book Modification</h3>
+                <p>Add,Update & delete books.Check books that are running out of stock.</p>
+            </div>
     
 </body>
 </html>
