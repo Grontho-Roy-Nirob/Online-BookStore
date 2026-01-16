@@ -22,6 +22,20 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
     <title>Dashboard</title>
 </head>
 <body>
+    <div class="container">
+
+    <!-- LEFT MENU -->
+    <div class="sidebar">
+        <h2>Admin Menu</h2>
+        <hr>
+        <a href="../php/viewuser.php">View Registered Users</a>
+        <a href="../php/order.php">View Customer Orders</a>
+        <a href="../php/bookmodification.php">Book Modification</a>
+        <a href="../php/sales.php">Generate Sales Report</a>
+        <a href="../php/category.php">Category Management</a>
+    </div>
+
+
     
 </body>
 </html>
