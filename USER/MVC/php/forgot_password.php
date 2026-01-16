@@ -41,3 +41,24 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="../Css/login.css">
+</head>
+<body>
+<div class="container">
+    <h2>Forgot Password</h2>
+
+    <form method="post">
+        <input type="text" name="username" placeholder="Username">
+        <input type="password" name="new_password" placeholder="New Password">
+        <button type="submit">Reset Password</button>
+    </form>
+
+    <p><?php echo $msg; ?></p>
+    <p><a href="login.php">Back to Login</a></p>
+</div>
+</body>
+</html>
