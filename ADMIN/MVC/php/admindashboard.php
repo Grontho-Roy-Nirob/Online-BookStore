@@ -34,7 +34,14 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
         <a href="../php/sales.php">Generate Sales Report</a>
         <a href="../php/category.php">Category Management</a>
     </div>
-
+ 
+    <!-- RIGHT CONTENT -->
+    <div class="content">
+        <?php if (!empty($loggedUser)) { ?>
+            <h2 class="welcome-text">
+                Welcome, <?php echo $loggedUser; ?>!!
+            </h2>
+        <?php } ?>
 
     
 </body>
