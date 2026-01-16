@@ -37,3 +37,21 @@ body {
 .sidebar a:hover {
     background-color: #8369c7;
 }
+
+.content {
+    margin-left: 270px;
+    padding: 20px;
+    text-align: center; 
+    box-sizing: border-box;
+}
+
+.content h1 {
+    color: #5a3ea1;
+    border: 3px solid #5a3ea1;
+    border-radius: 10px;
+    padding: 15px 30px;
+    display: inline-block;
+    background-color: #f2eaff; 
+    margin-bottom: 30px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
