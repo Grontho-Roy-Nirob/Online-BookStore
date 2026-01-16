@@ -20,6 +20,7 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="../Css/admindashboard.css">
 </head>
 <body>
     <div class="container">
