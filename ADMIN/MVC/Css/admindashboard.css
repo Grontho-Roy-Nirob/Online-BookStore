@@ -120,3 +120,14 @@ body {
     box-shadow: 3px 3px 8px rgba(0,0,0,0.15); 
 }
 
+.card h3 {
+    margin-top: 0;
+    color: #5a3ea1;
+    font-size: 18px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #333;
+}
