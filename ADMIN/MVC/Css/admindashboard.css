@@ -55,3 +55,18 @@ body {
     margin-bottom: 30px;
     box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
 }
+
+.welcome-text {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    display: block;
+    padding: 12px 25px;
+    margin-bottom: 15px;
+    border: 2px solid #5a3ea1;
+    border-radius: 8px;
+    background-color: #5a3ea1;    
+    color: white;                  
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+
+}
