@@ -81,11 +81,12 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
 
 </div>
 
-  <script src="../Js/viewuser.js"></script>
-  <script src="../Js/order.js"></script>
+  <script src="../Js/viewuserr.js"></script>
+  <script src="../Js/orderr.js"></script>
   <script src="../Js/bookmodification.js"></script>
   <script src="../Js/sales.js"></script>
   <script src="../Js/category.js"></script>
+
 </body>
 </html>
     
