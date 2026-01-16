@@ -93,3 +93,30 @@ body {
     margin: 0 auto 30px;
     border: 1px solid #ccc;
 }
+
+.cards {
+    width: 100%;
+    text-align: center; 
+}
+
+.card {
+    width: 260px;
+    height: 180px;
+    background-color: #ffffff; 
+    padding: 15px;           
+    margin: 10px;            
+    display: inline-block;  
+    vertical-align: top;     
+    border-radius: 8px;      
+    border: 1px solid #ccc;  
+    box-shadow: 2px 2px 6px rgba(0,0,0,0.1); 
+}
+
+.card:hover {
+    background-color: #f0f0f0; 
+    width: 270px;
+    height: 185px;
+    border: 1px solid #999;    
+    box-shadow: 3px 3px 8px rgba(0,0,0,0.15); 
+}
+
