@@ -43,6 +43,12 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
             </h2>
         <?php } ?>
 
+        <h1>Admin Dashboard</h1>
+        <a class="logout" href="../../../USER/MVC/php/logout.php">Logout</a>
+    
+        <hr>
+
+        
     
 </body>
 </html>
