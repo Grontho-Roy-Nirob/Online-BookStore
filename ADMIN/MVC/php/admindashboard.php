@@ -47,6 +47,13 @@ if (empty($loggedUser) || !str_starts_with($loggedUser, "@admin")) {
         <a class="logout" href="../../../USER/MVC/php/logout.php">Logout</a>
     
         <hr>
+        
+ <div class="cards">
+
+            <div class="card" id="user-card">
+                <h3>Registered Users</h3>
+                <p>See all users who registered on the website.</p>
+            </div>
 
         
     
