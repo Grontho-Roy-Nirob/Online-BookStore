@@ -1,3 +1,15 @@
+<?php
+session_start();
+include "../../../USER/MVC/Db/dbregister.php";
+
+/* Check admin login */
+if (!isset($_SESSION['username']) || !str_starts_with($_SESSION['username'], '@admin')) {
+    header("Location: ../../USER/MVC/php/login.php");
+    exit();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +19,6 @@
 </head>
 <body>
     <h2 class="title">Registered Users</h2>
-    
+
 </body>
 </html>
