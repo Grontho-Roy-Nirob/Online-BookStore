@@ -24,12 +24,32 @@ $result = $conn->query($sql);
     <h2 class="title">Registered Users</h2>
 
     <table>
-    <tr>
-        <th>Username</th>
-        <th>Hashed Password</th>
-    </tr>
+        <tr>
+            <th>Username</th>
+            <th>Hashed Password</th>
+        </tr>
 
-    
+        <?php
+        if ($result && $result->num_rows > 0) {
+
+            while ($row = $result->fetch_assoc()) {
+                echo "<tr>";
+                echo "<td>" . $row['username'] . "</td>";
+                echo "<td class='hash'>" . $row['password'] . "</td>";
+                echo "</tr>";
+            }
+
+        } else {
+            echo "<tr>";
+            echo "<td colspan='2' class='no-data'>No users found</td>";
+            echo "</tr>";
+        }
+        ?>
+    </table>
+
+</body>
+</html>
+
 
 </body>
 </html>
