@@ -8,6 +8,9 @@ if (!isset($_SESSION['username']) || !str_starts_with($_SESSION['username'], '@a
     exit();
 }
 
+
+$sql = "SELECT username, password FROM registereduser";
+$result = $conn->query($sql);
 ?>
 
 <!DOCTYPE html>
