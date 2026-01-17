@@ -21,3 +21,11 @@ h2 {
     margin-bottom: 20px;
     color: #333;
 }
+
+table {
+    width: 80%;
+    margin: auto;
+    border-collapse: collapse;
+    background: white;
+}
+
