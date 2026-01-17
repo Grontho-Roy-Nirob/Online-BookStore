@@ -23,5 +23,13 @@ $result = $conn->query($sql);
 <body>
     <h2 class="title">Registered Users</h2>
 
+    <table>
+    <tr>
+        <th>Username</th>
+        <th>Hashed Password</th>
+    </tr>
+
+    
+
 </body>
 </html>
