@@ -18,7 +18,7 @@ $result = $conn->query($sql);
 <head>
     <meta charset="UTF-8">
     <title>Admin - View Users</title>
-    <link rel="stylesheet" href="../Css/viewuserr.css">
+    <link rel="stylesheet" href="../Css/viewuser.css">
 </head>
 <body>
     <h2 class="title">Registered Users</h2>
