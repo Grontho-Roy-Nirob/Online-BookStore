@@ -49,7 +49,3 @@ $result = $conn->query($sql);
 
 </body>
 </html>
-
-
-</body>
-</html>
