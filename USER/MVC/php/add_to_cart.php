@@ -41,3 +41,24 @@ if ((int)$book['quantity'] <= 0) {
     echo "outofstock";
     exit();
 }
+
+/*If already in cart, make sure cart qty won't exceed stock */
+$found = false;
+
+foreach ($_SESSION['cart'] as &$item) {
+    if ((int)$item['id'] === $id) {
+
+        if ((int)$item['qty'] >= (int)$book['quantity']) {
+            echo "limit"; // can't add more than stock
+            exit();
+        }
+
+        $item['qty']++;
+        // also refresh title/price from DB (security)
+        $item['title'] = $book['title'];
+        $item['price'] = (float)$book['final_price'];
+
+        $found = true;
+        break;
+    }
+}
