@@ -70,3 +70,37 @@ body{
     opacity:0.9;
 }
 
+/* Items section */
+.items-box{
+    margin-top:16px;
+    border-top:1px solid #e5e5e5;
+    padding-top:14px;
+}
+
+/* Table */
+.items-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.items-table th,
+.items-table td{
+    padding:10px;
+    border-bottom:1px solid #eee;
+    text-align:left;
+    font-size:14px;
+}
+
+.items-table th{
+    background:#f6f8fa;
+    font-weight:600;
+}
+
+/* Empty message */
+.empty{
+    text-align:center;
+    margin-top:40px;
+    font-size:16px;
+    color:#777;
+}
+
