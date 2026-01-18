@@ -105,3 +105,29 @@ if (!$conn->query($sql)) {
 }
 
 $order_id = (int)$conn->insert_id;
+
+/* STEP 3: Insert order_items + decrease stock (AND save book_title!) */
+foreach ($verifiedCart as $v) {
+
+    $book_id = (int)$v['book_id'];
+    $qty     = (int)$v['qty'];
+    $price   = (float)$v['price'];
+    $title   = $conn->real_escape_string($v['title']); // important
+
+    // decrease stock FIRST and verify
+    $sqlStock = "UPDATE books
+                 SET quantity = quantity - $qty
+                 WHERE id = $book_id AND quantity >= $qty";
+    $conn->query($sqlStock);
+
+    if ($conn->affected_rows != 1) {
+        $_SESSION['checkout_error'] = "Stock issue detected. Please try again.";
+        header("Location: checkout.php");
+        exit();
+    }
+
+    // insert order item INCLUDING book_title
+    $sqlItem = "INSERT INTO order_items (order_id, book_id, book_title, quantity, price)
+                VALUES ($order_id, $book_id, '$title', $qty, $price)";
+    $conn->query($sqlItem);
+}
