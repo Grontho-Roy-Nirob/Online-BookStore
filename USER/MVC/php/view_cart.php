@@ -71,3 +71,7 @@ if (!isset($_SESSION['cart'])) {
 
     <?php } ?>
 </div>
+<script src="../Js/view_cart.js"></script>
+
+</body>
+</html>
