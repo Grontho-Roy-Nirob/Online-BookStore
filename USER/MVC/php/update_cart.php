@@ -16,3 +16,27 @@ if ($action === "cancel") {
     echo "success|0|0|1";
     exit();
 }
+
+// UPDATE / REMOVE
+for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+
+    if ((int)$_SESSION['cart'][$i]['id'] === $id) {
+
+        if ($action === "increase") {
+            $_SESSION['cart'][$i]['qty']++;
+        }
+        else if ($action === "decrease") {
+            $_SESSION['cart'][$i]['qty']--;
+            if ($_SESSION['cart'][$i]['qty'] <= 0) {
+                array_splice($_SESSION['cart'], $i, 1);
+                $removed = 1;
+            }
+        }
+        else if ($action === "remove") {
+            array_splice($_SESSION['cart'], $i, 1);
+            $removed = 1;
+        }
+
+        break;
+    }
+}
