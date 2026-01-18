@@ -112,3 +112,47 @@ body {
 .cart-right button:hover {
     text-decoration: underline;
 }
+
+/* Total */
+h3 {
+    text-align: left;
+    font-size: 22px;
+    margin-top: 25px;
+}
+
+/* Actions */
+.cart-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 14px;
+    margin-top: 30px;
+}
+
+.cart-actions a,
+.cart-actions button {
+    all: unset;   
+    padding: 12px 22px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+}
+
+/* Buttons */
+.cart-actions a {
+    background: #3498db;
+}
+
+.cart-actions .checkout-btn {
+    background: #27ae60;
+}
+
+.cart-actions button {
+    background: #e67e22;
+}
+
+.cart-actions a:hover,
+.cart-actions button:hover {
+    opacity: 0.9;
+}
