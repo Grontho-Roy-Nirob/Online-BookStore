@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* Page */
+body{
+    font-family:"Segoe UI", Arial, sans-serif;
+    background:#f4f6f8;
+    color:#333;
+}
+
+/* Container */
+.container{
+    max-width:900px;
+    margin:40px auto;
+    padding:20px;
+}
+
+/* Title */
+.page-title{
+    text-align:center;
+    font-size:30px;
+    font-weight:600;
+    margin-bottom:30px;
+}
