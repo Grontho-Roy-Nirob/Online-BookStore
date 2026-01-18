@@ -113,3 +113,21 @@ $result = $conn->query($sql);
         <a class="btn" href="index.php">Back to Home</a>
     </div>
 </div>
+
+<script>
+function toggleItems(orderId) {
+    var box = document.getElementById("items-" + orderId);
+    var btn = document.getElementById("btn-" + orderId);
+
+    if (box.style.display === "none") {
+        box.style.display = "block";
+        btn.innerHTML = "Hide Items";
+    } else {
+        box.style.display = "none";
+        btn.innerHTML = "View Items";
+    }
+}
+</script>
+
+</body>
+</html>
