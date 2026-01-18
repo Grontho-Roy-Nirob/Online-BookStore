@@ -16,3 +16,22 @@ $address  = trim($_POST['address'] ?? "");
 $method   = $_POST['payment_method'] ?? "";
 
 $payment_number = "";
+
+/* Payment validation */
+if ($method == "bKash") {
+    if (empty($_POST['bkash_number'])) {
+        $_SESSION['checkout_error'] = "bKash number is required";
+        header("Location: checkout.php");
+        exit();
+    }
+    $payment_number = $_POST['bkash_number'];
+}
+
+if ($method == "Nagad") {
+    if (empty($_POST['nagad_number'])) {
+        $_SESSION['checkout_error'] = "Nagad number is required";
+        header("Location: checkout.php");
+        exit();
+    }
+    $payment_number = $_POST['nagad_number'];
+}
