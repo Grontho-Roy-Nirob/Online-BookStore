@@ -18,3 +18,26 @@ if ($id <= 0) {
     echo "invalid";
     exit();
 }
+
+/*Check stock + availability from DB */
+$res = $conn->query("SELECT title, final_price, status, quantity 
+                     FROM books 
+                     WHERE id=$id 
+                     LIMIT 1");
+
+$book = ($res && $res->num_rows == 1) ? $res->fetch_assoc() : null;
+
+if (!$book) {
+    echo "notfound";
+    exit();
+}
+
+if (strtolower($book['status']) != "available") {
+    echo "notavailable";
+    exit();
+}
+
+if ((int)$book['quantity'] <= 0) {
+    echo "outofstock";
+    exit();
+}
