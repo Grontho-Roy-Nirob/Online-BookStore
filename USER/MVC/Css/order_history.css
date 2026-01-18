@@ -25,3 +25,48 @@ body{
     font-weight:600;
     margin-bottom:30px;
 }
+
+/* Order card */
+.order-card{
+    background:#ffffff;
+    border-radius:14px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+/* Order header */
+.order-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.order-head h3{
+    font-size:20px;
+    margin-bottom:6px;
+}
+
+.order-head p{
+    font-size:14px;
+    color:#555;
+}
+
+/* Toggle button */
+.toggle-btn{
+    border:none;
+    background:#2575fc;
+    color:#fff;
+    padding:10px 16px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+    font-size:14px;
+}
+
+.toggle-btn:hover{
+    opacity:0.9;
+}
+
