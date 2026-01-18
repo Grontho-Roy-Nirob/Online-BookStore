@@ -83,3 +83,25 @@ foreach ($_SESSION['cart'] as $item) {
         "title"   => $title
     ];
 }
+
+$total = round($total, 2);
+
+/* Escape order info */
+$u  = $conn->real_escape_string($username);
+$n  = $conn->real_escape_string($name);
+$m  = $conn->real_escape_string($mobile);
+$a  = $conn->real_escape_string($address);
+$pm = $conn->real_escape_string($method);
+$pn = $conn->real_escape_string($payment_number);
+
+/* STEP 2: Insert order */
+$sql = "INSERT INTO orders 
+        (username, name, mobile, address, payment_method, payment_number, total_amount)
+        VALUES 
+        ('$u', '$n', '$m', '$a', '$pm', '$pn', '$total')";
+
+if (!$conn->query($sql)) {
+    die("Order insert failed: " . $conn->error);
+}
+
+$order_id = (int)$conn->insert_id;
