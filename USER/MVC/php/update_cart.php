@@ -40,3 +40,17 @@ for ($i = 0; $i < count($_SESSION['cart']); $i++) {
         break;
     }
 }
+
+// TOTAL
+$total = 0;
+for ($i = 0; $i < count($_SESSION['cart']); $i++) {
+    $total += ((float)$_SESSION['cart'][$i]['price'] * (int)$_SESSION['cart'][$i]['qty']);
+}
+
+$cartCount = count($_SESSION['cart']);
+$total = round($total, 2);
+
+// plain text: success|cartCount|total|removed
+echo "success|$cartCount|$total|$removed";
+exit();
+?>
