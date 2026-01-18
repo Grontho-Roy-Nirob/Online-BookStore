@@ -131,3 +131,29 @@ foreach ($verifiedCart as $v) {
                 VALUES ($order_id, $book_id, '$title', $qty, $price)";
     $conn->query($sqlItem);
 }
+
+/* Clear cart */
+unset($_SESSION['cart']);
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Order Successful</title>
+    <link rel="stylesheet" href="../Css/process_payment.css">
+</head>
+<body>
+<div class="success-card">
+    <div class="check">Checked Completed.</div>
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you, <b><?php echo htmlspecialchars($name); ?></b></p>
+
+    <div class="details">
+        <center><p><span>Order ID:</span> <?php echo $order_id; ?></p></center>
+        <center><p><span>Payment Method:</span> <?php echo htmlspecialchars($method); ?></p></center>
+        <center><p><span>Total Amount:</span> ৳<?php echo number_format($total, 2); ?></p></center>
+    </div>
+
+    <a href="../php/index.php" class="btn">Back to Home</a>
+</div>
+</body>
+</html>
