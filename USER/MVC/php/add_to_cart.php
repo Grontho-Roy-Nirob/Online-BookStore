@@ -62,3 +62,16 @@ foreach ($_SESSION['cart'] as &$item) {
         break;
     }
 }
+
+if (!$found) {
+    $_SESSION['cart'][] = [
+        "id"    => $id,
+        "title" => $book['title'],
+        "price" => (float)$book['final_price'],
+        "qty"   => 1
+    ];
+}
+
+echo "success";
+exit();
+?>
