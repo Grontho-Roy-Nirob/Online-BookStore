@@ -103,3 +103,21 @@ if ($books && $books->num_rows > 0) {
             <?php } ?>
         </td>
 
+        <td>
+            <select id="category-<?php echo $id; ?>">
+                <?php
+                foreach ($categoryList as $cid => $cname) {
+                    ?>
+                    <option value="<?php echo $cid; ?>"
+                        <?php
+                        if ($row['category_id'] == $cid) {
+                            echo "selected";
+                        }
+                        ?>>
+                        <?php echo $cname; ?>
+                    </option>
+                    <?php
+                }
+                ?>
+            </select>
+        </td>
