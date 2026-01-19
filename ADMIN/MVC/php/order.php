@@ -45,7 +45,15 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
                         <p><b>Date:</b> <?php echo $orderid['order_date']; ?></p>
                         <p><b>Address:</b> <?php echo $orderid['address']; ?></p>
                     </div>
+                
+             <div class="right">
+                        <p class="total">৳<?php echo number_format((float)$orderid['total_amount'], 2); ?></p>
+                        <button class="toggle-btn" onclick="toggleItems(<?php echo $oid; ?>)">View Items</button>
+                    </div>
+                </div>
+          
+             
       
-                    
+
 </body>
 </html>
