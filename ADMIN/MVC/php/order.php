@@ -31,5 +31,21 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
             $items = $conn->query("SELECT * FROM order_items WHERE order_id='$oid'");
         ?>
 
+        <div class="order-card">
+                <div class="order-head">
+                    <div>
+                        <h3>Order #<?php echo $oid; ?></h3>
+                        <p><b>User:</b> <?php echo $orderid['username']; ?></p>
+                        <p><b>Name:</b> <?php echo $orderid['name']; ?></p>
+                        <p><b>Payment:</b> <?php echo $orderid['payment_method']; ?>
+                            <?php if (!empty($orderid['payment_number'])) { ?>
+                                (<?php echo $orderid['payment_number']; ?>)
+                            <?php } ?>
+                        </p>
+                        <p><b>Date:</b> <?php echo $orderid['order_date']; ?></p>
+                        <p><b>Address:</b> <?php echo $orderid['address']; ?></p>
+                    </div>
+      
+                    
 </body>
 </html>
