@@ -4,3 +4,16 @@ body {
     margin: 0;
     padding: 0;
 }
+
+h2 {
+     text-align: center;            
+    color: #fff;                     
+    background-color: #2980b9;       
+    font-size: 26px;                  
+    font-weight: bold;                
+    border: 3px solid #1f618d;       
+    border-radius: 10px;             
+    padding: 10px 20px;           
+    margin: 30px auto;            
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+}
