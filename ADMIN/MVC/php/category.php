@@ -22,6 +22,15 @@ $cats = $conn->query("SELECT * FROM categories ORDER BY id DESC");
     <h2>Category Management</h2>
 </div>
 
+<div class="box">
+    <h3>Add Category</h3>
+    <input type="text" id="cat_name" placeholder="Category Name">
+    <button onclick="addCategory()">Add Category</button>
+</div>
+
+<hr>
+
+
 
 </body>
 </html>
