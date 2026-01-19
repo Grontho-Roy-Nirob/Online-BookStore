@@ -21,3 +21,21 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         }  
 
         $whereSQL = !empty($where) ? "WHERE ".implode(" AND ", $where) : '';
+
+        $sql = "
+        SELECT 
+                o.order_id, 
+                o.name, 
+                o.order_date, 
+                o.total_amount,
+                i.book_title, 
+                i.price, 
+                i.quantity
+            FROM orders o
+            JOIN order_items i ON o.order_id = i.order_id
+            LEFT JOIN books b ON i.book_id = b.id
+            $whereSQL ORDER BY o.order_date DESC";
+
+        $result = $conn->query($sql);
+
+
