@@ -103,3 +103,19 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
         }
         ?>
     </select><br><br>
+
+     <select name="status" required>
+        <option value="Available" <?php if($status=="Available") echo 'selected'; ?>>Available</option>
+        <option value="Unavailable" <?php if($status=="Unavailable") echo 'selected'; ?>>Unavailable</option>
+    </select><br><br>
+
+    <input type="file" name="image" required><br><br>
+
+    <button type="submit">Add Book</button><br><br>
+</form>
+
+
+<a href="viewbooks.php" class=".btn-link"><button>View Book List</button></a>
+<script src="../Ajax/bookajax.js"></script>
+</body>
+</html>
