@@ -18,5 +18,8 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
 </head>
 <body>
     
+<div class="container">
+    <h2 class="page-title" >Customer Orders</h2>
+    
 </body>
 </html>
