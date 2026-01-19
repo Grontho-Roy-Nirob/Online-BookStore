@@ -63,4 +63,46 @@ textarea {
     min-height: 80px;
 }
 
+button {
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20%;       
+    margin: 8px auto 0 auto;
+    display: block;   
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+a {
+    text-decoration: none; /* remove underline */
+}
+
+a.button-link {
+    display: block;          
+    width: 20%;               
+    margin: 8px auto 0 auto; 
+    padding: 10px;
+    background-color: #2196f3; 
+    color: white;
+    text-align: center;      
+    text-decoration: none;    
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+a.button-link:hover {
+    background-color: #1976d2;
+}
+
+
 
