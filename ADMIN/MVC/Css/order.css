@@ -27,3 +27,25 @@ body{
     border-radius: 15px;
     text-align: center;     
 }
+
+.order-card{
+    background:#fff;
+    border-radius:14px;
+    padding:18px;
+    margin-bottom:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,0.08);
+}
+
+.order-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    gap:15px;
+}
+
+.order-head h3{
+    margin-bottom:8px;
+}
+.order-head p{
+    margin:4px 0;color:#444;
+}
