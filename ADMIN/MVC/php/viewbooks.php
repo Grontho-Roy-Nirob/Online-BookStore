@@ -90,4 +90,16 @@ if ($books && $books->num_rows > 0) {
         </td>
 
        <td>
+  
+     <?php 
+            $qty = (int)$row['quantity'];
+            $lowStock = $qty <= 2;
+        ?>
+            <input type="text" id="quantity-<?php echo $id; ?>"
+                value="<?php echo $qty; ?>"
+                style="<?php echo $lowStock ? 'border: 2px solid red; color: red;' : ''; ?>">
+            <?php if ($lowStock) { ?>
+                <span style="color: red; font-weight: bold; margin-left: 5px;">Low Stock!</span>
+            <?php } ?>
+        </td>
 
