@@ -21,3 +21,32 @@ h2{
     border-radius: 5px;
     background-color: #fff;
 }
+
+.box h3{
+    margin-bottom:10px;
+}
+
+.box input{
+    width:100%;
+    padding:10px;
+    border:1px solid #ccc;
+    border-radius:8px;
+    margin-bottom:10px;
+    font-size:14px;
+}
+
+.box button{
+    width:100%;
+    padding:11px;
+    background:#28a745;
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:15px;
+    font-weight:600;
+}
+
+.box button:hover{
+    opacity:0.9;
+}
