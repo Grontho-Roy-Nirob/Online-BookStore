@@ -21,3 +21,26 @@ function addCategory() {
     xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
     xhttp.send("action=add&name=" + encodeURIComponent(name));
 }
+
+function updateCategory(id) {
+    var name = document.getElementById("name-" + id).value.trim();
+
+    if (name === "") {
+        alert("Category name cannot be empty!");
+        return;
+    }
+
+    var xhttp = new XMLHttpRequest();
+    xhttp.onreadystatechange = function() {
+        if (this.readyState === 4 && this.status === 200) {
+            if (this.responseText === "Updated") {
+                alert("Category updated!");
+            } else {
+                alert(this.responseText);
+            }
+        }
+    };
+    xhttp.open("POST", "categoryaction.php", true);
+    xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+    xhttp.send("action=update&id=" + id + "&name=" + encodeURIComponent(name));
+}
