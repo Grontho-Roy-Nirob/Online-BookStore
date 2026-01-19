@@ -13,3 +13,11 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
     $to   = trim($_GET['to'] ?? '');
     $where = [];
 
+    if ($from !== '') {
+            $where[] = "DATE(o.order_date) >= '$from'";
+        }
+        if ($to !== ''){
+            $where[] = "DATE(o.order_date) <= '$to'";
+        }  
+
+        $whereSQL = !empty($where) ? "WHERE ".implode(" AND ", $where) : '';
