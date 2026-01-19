@@ -101,3 +101,13 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 
 <h2 class="page-title">Sales Report</h2>
 
+<div class="filter-box">
+    From: <input type="date" id="from">
+    To: <input type="date" id="to">
+    <button onclick="filterSales()">Filter</button>
+</div>
+<table class="report-table" id="salesTable"></table>
+
+<script src="../Ajax/salesajax.js"></script>
+</body>
+</html>
