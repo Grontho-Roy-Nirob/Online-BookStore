@@ -93,8 +93,3 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
 
 </body>
 </html>
-
-
-
-</body>
-</html>
