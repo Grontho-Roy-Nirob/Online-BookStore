@@ -43,3 +43,24 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     else if ($category === '') 
         $error = "Please select a category";
 
+ if ($error === "") {
+        $imageName = $_FILES['image']['name'];
+        move_uploaded_file($_FILES['image']['tmp_name'], "../../../USER/MVC/Picture/" . $imageName);
+
+        $sql = "INSERT INTO books (title, author, price, discount, final_price, quantity, description, image, status, category_id)
+                VALUES ('$title','$author','$price','$discount','$final_price','$quantity','$description','$imageName','$status','$category')";
+
+        if ($conn->query($sql)) {
+            $title = $author = $price = $discount = $final_price = $quantity = $description = $category = $status = "";
+            header("Location: viewbooks.php");
+            exit(); 
+        } 
+        else 
+        {
+            $error = "Failed to add book!";
+            $title = $author = $price = $discount = $final_price = $quantity = $description = $category = $status = "";
+        }
+
+    }
+}
+?>
