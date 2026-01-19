@@ -64,3 +64,22 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     }
 }
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Book</title>
+    <link rel="stylesheet" href="../Css/bookmodification.css">
+</head>
+<body>
+
+    <h2>Add New Book</h2>
+    <a href="admindashboard.php" class="back-dashboard">Back to Dashboard</a><br><br>
+
+    <?php if ($error !== ""): ?>
+        <script>alert('<?php echo $error; ?>');</script>
+    <?php endif; ?>
+
+    <?php if ($success !== ""): ?>
+        <script>alert('<?php echo $success; ?>');</script>
+    <?php endif; ?>
