@@ -45,7 +45,24 @@ $cats = $conn->query("SELECT * FROM categories ORDER BY id DESC");
                        id="name-<?php echo $row['id']; ?>"
                        value="<?php echo $row['name']; ?>">
             </td>
+           <td>
+                <div class="action-btns">
+                    <button class="update-btn"
+                            onclick="updateCategory(<?php echo $row['id']; ?>)">
+                        Update
+                    </button>
+                    <button class="delete-btn"
+                            onclick="deleteCategory(<?php echo $row['id']; ?>)">
+                        Delete
+                    </button>
+                </div>
+            </td>
+        </tr>
+        <?php } ?>
 
+    </table>
+</div>
 
+<script src="../Ajax/categoryajax.js"></script>
 </body>
 </html>
