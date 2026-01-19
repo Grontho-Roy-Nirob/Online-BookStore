@@ -30,3 +30,22 @@
     background-color: #1e8449;     
 }
 
+.back-dashboard {
+    display: inline-block;         
+    padding: 8px 15px;             
+    background-color: #be0c1b;     
+    color: white;                 
+    text-decoration: none;          
+    border-radius: 5px;           
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    margin: 0px 0 20px 20px;      
+}
+
+.back-dashboard:hover {
+    background-color: #b31d1d;     
+}
+
+
+
