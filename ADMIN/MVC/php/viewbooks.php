@@ -140,4 +140,26 @@ if ($books && $books->num_rows > 0) {
             </select>
         </td>
 
+        <td>
+            <button class="update-btn"
+                    onclick="updateBook(<?php echo $id; ?>)">Update</button>
+
+            <button class="delete-btn"
+                    onclick="deleteBook(<?php echo $id; ?>)">Delete</button>
+        </td>
+
+        </tr>
+        <?php
+    }
+}
+?>
+
+</table>
+</div>
+
+<script src="../Ajax/bookajax.js"></script>
+
+</body>
+</html>
+
 
