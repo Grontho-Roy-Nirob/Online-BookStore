@@ -9,3 +9,14 @@ if (!isset($_SESSION["username"]) || !str_starts_with($_SESSION["username"], "@a
 
 $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Customer Orders</title>
+    <link rel="stylesheet" href="../Css/order.css">
+</head>
+<body>
+    
+</body>
+</html>
