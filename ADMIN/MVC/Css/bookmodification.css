@@ -104,5 +104,22 @@ a.button-link:hover {
     background-color: #1976d2;
 }
 
+.alert {
+    width: 500px;
+    max-width: 90%;
+    margin: 15px auto;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
 
+.alert-error {
+    background-color: #f44336;
+    color: white;
+}
 
+.alert-success {
+    background-color: #4caf50;
+    color: white;
+}
