@@ -70,6 +70,15 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
                             $grand += $mul;
                         ?>
 
+                 <tr>
+                    <td><?php echo $item['book_title']; ?></td>
+                    <td>৳<?php echo number_format($p, 2); ?></td>
+                    <td><?php echo $q; ?></td>
+                    <td>৳<?php echo number_format($mul, 2); ?></td>
+                </tr>
+                <?php } ?>
+
+
 
 </body>
 </html>
