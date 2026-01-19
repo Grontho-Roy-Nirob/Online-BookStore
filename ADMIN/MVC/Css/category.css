@@ -50,3 +50,15 @@ h2{
 .box button:hover{
     opacity:0.9;
 }
+
+.table-container{
+    background:#fff;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,0.08);
+    overflow:hidden;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
