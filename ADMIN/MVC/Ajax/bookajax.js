@@ -43,3 +43,18 @@ function updateBook(id) {
     x.setRequestHeader("Content-type","application/x-www-form-urlencoded");
     x.send(d);
 }
+
+function deleteBook(id) {
+    if(!confirm("Delete?")) return;
+
+    var x = new XMLHttpRequest();
+    x.onreadystatechange = function() {
+        if(this.readyState === 4 && this.status === 200) {
+            alert(this.responseText);
+            location.reload();
+        }
+    };
+    x.open("POST","bookaction.php",true);
+    x.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+    x.send("action=delete&id="+id);
+}
