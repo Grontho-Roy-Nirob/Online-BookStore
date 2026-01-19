@@ -8,4 +8,22 @@ body{
     font-family:"Segoe UI", Arial, sans-serif;
     background:#f4f6f8;
     color:#333;
+} 
+
+.container{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.page-title {
+    display: block;          
+    margin: 0 auto 40px;     
+    font-size: 27px;
+    font-weight: bold;
+    color: #19066e;
+    padding: 20px 40px;
+    border: 4px solid #240470;
+    border-radius: 15px;
+    text-align: center;     
 }
