@@ -37,6 +37,14 @@ $cats = $conn->query("SELECT * FROM categories ORDER BY id DESC");
             <th>Category Name</th>
             <th>Action</th>
         </tr>
+<?php while ($row = $cats->fetch_assoc()) { ?>
+        <tr id="row-<?php echo $row['id']; ?>">
+            <td><?php echo $row['id']; ?></td>
+            <td>
+                <input type="text"
+                       id="name-<?php echo $row['id']; ?>"
+                       value="<?php echo $row['name']; ?>">
+            </td>
 
 
 </body>
