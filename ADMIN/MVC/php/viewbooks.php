@@ -35,3 +35,18 @@ $books = $conn->query($bookSql);
 <a href="admindashboard.php" class="back-dashboard">Back to Dashboard</a><br><br>
 <a href="bookmodification.php" class="btn-add-book">Add New Book</a><br><br>
 
+<div class="table-container">
+<table >
+<tr>
+    <th>Image</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Price</th>
+    <th>Discount</th>
+    <th>Final</th>
+    <th>Qty</th>
+    <th>Category</th>
+    <th>Description</th>
+    <th>Status</th>
+    <th>Action</th>
+</tr>
