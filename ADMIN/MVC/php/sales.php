@@ -90,4 +90,14 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 }
 ?>
 
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sales Report</title>
+    <link rel="stylesheet" href="../Css/sales.css">
+</head>
+<body>
+
+<h2 class="page-title">Sales Report</h2>
 
