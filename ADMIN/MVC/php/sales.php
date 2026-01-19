@@ -56,3 +56,16 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         exit;
     }
 
+    $sl = 1;
+    $grandTotal = 0;
+    $lastOrder = null;
+
+    while ($row = $result->fetch_assoc()) {
+        $itemTotal = $row['price'] * $row['quantity'];
+
+        if ($lastOrder !== $row['order_id']) {
+            $grandTotal += $row['total_amount'];
+            $lastOrder = $row['order_id'];
+        }
+
+
