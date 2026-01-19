@@ -93,3 +93,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <input type="text" id="final_price" name="final_price" placeholder="Final Price" value="<?php echo $final_price; ?>" readonly required><br><br>
     <input type="text" name="quantity" placeholder="Quantity" value="<?php echo $quantity; ?>" required><br><br>
     <textarea name="description" placeholder="Book Description" required><?php echo $description; ?></textarea><br><br>
+
+     <select name="category" required>
+        <option value="">-- Select Category --</option>
+        <?php
+        foreach ($categories as $cat) {
+            $selected = ($category == $cat['id']) ? 'selected' : '';
+            echo "<option value='".$cat['id']."' $selected>".$cat['name']."</option>";
+        }
+        ?>
+    </select><br><br>
