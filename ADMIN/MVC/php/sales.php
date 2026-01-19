@@ -38,4 +38,17 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
 
         $result = $conn->query($sql);
 
+     echo '
+    <tr>
+        <th>#</th>
+        <th>Order ID</th>
+        <th>Date</th>
+        <th>Customer</th>
+        <th>Book</th>
+        <th>Price</th>
+        <th>Qty</th>
+        <th>Item Total</th>
+        <th>Order Total</th>
+    </tr>';
+
 
