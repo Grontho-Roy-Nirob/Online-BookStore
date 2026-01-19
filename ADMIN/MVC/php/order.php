@@ -61,7 +61,15 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
                             <th>Subtotal</th>
                         </tr>
 
-      
+              <?php 
+                        $grand = 0;
+                        while($item = $items->fetch_assoc()) { 
+                            $p = (float)$item['price'];
+                            $q = (int)$item['quantity'];
+                            $mul = $p * $q;
+                            $grand += $mul;
+                        ?>
+
 
 </body>
 </html>
