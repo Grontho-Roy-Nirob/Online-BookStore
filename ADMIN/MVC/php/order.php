@@ -78,6 +78,22 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
                 </tr>
                 <?php } ?>
 
+                <tr>
+                        <td colspan="3" style="text-align:right;"><b>Total</b></td>
+                        <td><b>৳<?php echo number_format($grand, 2); ?></b></td>
+                </tr>
+                </table>
+            </div>
+        </div>
+        <?php } ?>
+    <?php } ?>
+  </div>
+
+<script src="../Js/orderview.js"></script>
+
+</body>
+</html>
+
 
 
 </body>
