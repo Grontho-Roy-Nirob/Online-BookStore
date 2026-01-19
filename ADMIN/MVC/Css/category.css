@@ -51,6 +51,12 @@ h2{
     opacity:0.9;
 }
 
+hr {
+    border: none;
+    height: 2px;
+    margin: 20px 0;
+}
+
 .table-container{
     background:#fff;
     border-radius:10px;
