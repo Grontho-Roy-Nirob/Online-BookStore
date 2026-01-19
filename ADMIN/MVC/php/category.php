@@ -30,6 +30,13 @@ $cats = $conn->query("SELECT * FROM categories ORDER BY id DESC");
 
 <hr>
 
+<div class="table-container">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Category Name</th>
+            <th>Action</th>
+        </tr>
 
 
 </body>
