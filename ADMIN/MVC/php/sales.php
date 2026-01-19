@@ -80,4 +80,14 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
             <td>৳'.number_format($row['total_amount'], 2).'</td>
         </tr>';
     }
+     
+     echo '<tr>
+        <td colspan="8"><b>Grand Total Sales</b></td>
+        <td><b>৳'.number_format($grandTotal, 2).'</b></td>
+    </tr>';
+
+    exit;
+}
+?>
+
 
