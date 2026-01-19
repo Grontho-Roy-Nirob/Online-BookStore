@@ -11,3 +11,22 @@
     box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
 }
 
+.btn-add-book {
+    display: block;                
+    width: 20%;                    
+    margin: 0px auto;             
+    padding: 10px;
+    background-color: #27ae60;     
+    color: white;              
+    text-align: center;           
+    text-decoration: none;         
+    border-radius: 5px;             
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.btn-add-book:hover {
+    background-color: #1e8449;     
+}
+
