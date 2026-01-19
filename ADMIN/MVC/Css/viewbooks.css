@@ -113,4 +113,34 @@ textarea {
     min-height: 60px;
 }
 
+button.update-btn,button.delete-btn {
+    padding: 8px 12px;    
+    font-size: 14px;        
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;     
+    cursor: pointer;
+    margin: 3px 0;
+    width: 80px;            
+}
+
+button.update-btn {
+    background-color: #27ae60; 
+    color: white;
+}
+
+button.update-btn:hover {
+    background-color: #1e8449; 
+}
+
+
+button.delete-btn {
+    background-color: #c0392b;
+    color: white;
+}
+
+button.delete-btn:hover {
+    background-color: #96281b; 
+}
+
 
