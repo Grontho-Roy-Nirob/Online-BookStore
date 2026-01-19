@@ -68,4 +68,16 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
             $lastOrder = $row['order_id'];
         }
 
+         echo '<tr>
+            <td>'.$sl++.'</td>
+            <td>'.$row['order_id'].'</td>
+            <td>'.date("d M Y", strtotime($row['order_date'])).'</td>
+            <td>'.$row['name'].'</td>
+            <td>'.$row['book_title'].'</td>
+            <td>৳'.number_format($row['price'], 2).'</td>
+            <td>'.$row['quantity'].'</td>
+            <td>৳'.number_format($itemTotal, 2).'</td>
+            <td>৳'.number_format($row['total_amount'], 2).'</td>
+        </tr>';
+    }
 
