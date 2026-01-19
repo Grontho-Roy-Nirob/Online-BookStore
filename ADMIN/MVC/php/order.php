@@ -52,7 +52,15 @@ $orders = $conn->query("SELECT * FROM orders ORDER BY order_id DESC");
                     </div>
                 </div>
           
-             
+             <div class="items-box" id="items-<?php echo $oid; ?>" style="display:none;">
+                    <table class="items-table">
+                        <tr>
+                            <th>Book</th>
+                            <th>Price</th>
+                            <th>Qty</th>
+                            <th>Subtotal</th>
+                        </tr>
+
       
 
 </body>
