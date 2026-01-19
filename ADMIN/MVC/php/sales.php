@@ -51,4 +51,8 @@ if (isset($_GET['ajax']) && $_GET['ajax'] == 1) {
         <th>Order Total</th>
     </tr>';
 
+    if ($result->num_rows == 0) {
+        echo '<tr><td colspan="9" style="text-align:center;">No sales found</td></tr>';
+        exit;
+    }
 
