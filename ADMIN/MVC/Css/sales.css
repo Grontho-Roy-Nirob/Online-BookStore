@@ -5,3 +5,16 @@ body {
     padding: 20px;
     color: #333;
 }
+
+.page-title {
+    display: block;         
+    text-align: center;   
+    font-size: 28px;
+    font-weight: bold;
+    color: #8B0000;
+    padding: 8px 15px;
+    border: 2px solid #8B0000;
+    border-radius: 6px;
+    background-color: #f4f4f4;
+    margin: 0 auto 20px auto;  
+}
