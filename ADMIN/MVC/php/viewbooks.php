@@ -121,3 +121,23 @@ if ($books && $books->num_rows > 0) {
                 ?>
             </select>
         </td>
+
+        <td>
+            <textarea id="desc-<?php echo $id; ?>"> <?php echo $row['description']; ?></textarea>
+        </td>
+
+        <td>
+            <select id="status-<?php echo $id; ?>">
+                <option value="Available"
+                    <?php if ($row['status'] == 'Available') { echo "selected"; } ?>>
+                    Available
+                </option>
+
+                <option value="Unavailable"
+                    <?php if ($row['status'] == 'Unavailable') { echo "selected"; } ?>>
+                    Unavailable
+                </option>
+            </select>
+        </td>
+
+
