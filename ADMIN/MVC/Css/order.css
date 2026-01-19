@@ -75,3 +75,9 @@ body{
 .toggle-btn:hover{
     opacity:0.9;
 }
+
+.items-box{
+    margin-top:14px;
+    border-top:1px solid #eee;
+    padding-top:12px;
+}
