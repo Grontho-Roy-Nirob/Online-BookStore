@@ -17,6 +17,11 @@ $cats = $conn->query("SELECT * FROM categories ORDER BY id DESC");
     <link rel="stylesheet" href="../Css/category.css">
 </head>
 <body>
-    
+
+<div style="text-align:center;">
+    <h2>Category Management</h2>
+</div>
+
+
 </body>
 </html>
