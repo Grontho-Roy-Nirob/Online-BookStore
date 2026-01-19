@@ -49,3 +49,29 @@ body{
 .order-head p{
     margin:4px 0;color:#444;
 }
+
+.right{
+    text-align:right;
+    min-width:170px;
+}
+
+.total{
+    font-size:20px;
+    font-weight:700;
+    color:#27ae60;
+    margin-bottom:10px;
+}
+
+.toggle-btn{
+    border:none;
+    background:#2575fc;
+    color:#fff;
+    padding:10px 14px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:600;
+}
+
+.toggle-btn:hover{
+    opacity:0.9;
+}
