@@ -45,3 +45,14 @@ if ($action === "update") {
     echo $conn->query($sql) ? "Updated" : "Failed";
     exit();
 }
+
+
+if ($action === "delete") {
+    $id = $_POST['id'];
+    $sql = "DELETE FROM books WHERE id=$id";
+    echo $conn->query($sql) ? "Deleted" : "Failed";
+    exit();
+}
+
+echo "Invalid action";
+?>
