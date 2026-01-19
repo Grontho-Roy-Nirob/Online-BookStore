@@ -37,12 +37,30 @@ h2 {
 
 form {
     background-color: #fff;
-    width: 500px;       /* friendly width */
+    width: 500px;      
     max-width: 90%;
     margin: auto;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+}
+
+input[type="text"],
+input[type="file"],
+select,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 12px; /* reduced spacing */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
 }
 
 
