@@ -50,3 +50,44 @@ $books = $conn->query($bookSql);
     <th>Status</th>
     <th>Action</th>
 </tr>
+
+<?php
+if ($books && $books->num_rows > 0) {
+    while ($row = $books->fetch_assoc()) {
+        $id = (int)$row['id'];
+        ?>
+        <tr id="row-<?php echo $id; ?>">
+
+        <td>
+            <img src="../../../USER/MVC/Picture/<?php echo $row['image']; ?>" width="70">
+        </td>
+
+        <td>
+            <input type="text" id="title-<?php echo $id; ?>"
+                   value="<?php echo $row['title']; ?>">
+        </td>
+
+        <td>
+            <input type="text" id="author-<?php echo $id; ?>"
+                   value="<?php echo $row['author']; ?>">
+        </td>
+
+        <td>
+            <input type="text" id="price-<?php echo $id; ?>"
+                   value="<?php echo $row['price']; ?>"
+                   oninput="calcFinalUpdate(<?php echo $id; ?>)">
+        </td>
+
+        <td>
+            <input type="text" id="discount-<?php echo $id; ?>"
+                   value="<?php echo $row['discount']; ?>"
+                   oninput="calcFinalUpdate(<?php echo $id; ?>)">
+        </td>
+
+        <td>
+            <input type="text" id="final-<?php echo $id; ?>"
+                   value="<?php echo $row['final_price']; ?>" readonly>
+        </td>
+
+       <td>
+
