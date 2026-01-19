@@ -20,3 +20,18 @@ if ($catResult && $catResult->num_rows > 0) {
 $bookSql = "SELECT * FROM books ORDER BY id DESC";
 $books = $conn->query($bookSql);
 ?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book List</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="../Css/viewbooks.css">
+</head>
+
+<body>
+
+<h2 class="book-list-title">Book List</h2>
+<a href="admindashboard.php" class="back-dashboard">Back to Dashboard</a><br><br>
+<a href="bookmodification.php" class="btn-add-book">Add New Book</a><br><br>
+
