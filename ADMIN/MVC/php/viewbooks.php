@@ -16,3 +16,7 @@ if ($catResult && $catResult->num_rows > 0) {
         $categoryList[$c['id']] = $c['name'];
     }
 }
+
+$bookSql = "SELECT * FROM books ORDER BY id DESC";
+$books = $conn->query($bookSql);
+?>
