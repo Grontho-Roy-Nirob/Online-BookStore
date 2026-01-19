@@ -84,3 +84,16 @@ tr:nth-child(even) td{
 tr:hover td{
     background:#f3f8ff;
 }
+
+td input{
+    width:100%;
+    padding:8px;
+    border:1px solid #ccc;
+    border-radius:8px;
+}
+
+.action-btns{
+    display:flex;
+    gap:10px;
+}
+
