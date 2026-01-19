@@ -69,3 +69,25 @@ body {
     text-align: center;
     border-bottom: 1px solid #eee;
 }
+
+
+.report-table th {
+    background-color: #8B0000; 
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.report-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.report-table tr:hover {
+    background-color: #f1f1f1;
+}
+
+.total-row {
+    background-color: #8B0000;  
+    color: white;
+    font-weight: bold;
+}
