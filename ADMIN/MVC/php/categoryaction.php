@@ -33,3 +33,16 @@ if ($action === "update") {
     else echo "Failed";
     exit();
 }
+
+if ($action === "delete") {
+    $id = (int)($_POST['id'] ?? 0);
+
+    $conn->query("DELETE FROM books WHERE category_id = $id");
+
+    $ok = $conn->query("DELETE FROM categories WHERE id = $id");
+    echo $ok ? "Deleted" : "Error";
+    exit();
+}
+
+echo "Invalid action";
+?>
