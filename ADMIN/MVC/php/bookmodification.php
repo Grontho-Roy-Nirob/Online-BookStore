@@ -83,3 +83,13 @@ if ($_SERVER['REQUEST_METHOD'] === "POST") {
     <?php if ($success !== ""): ?>
         <script>alert('<?php echo $success; ?>');</script>
     <?php endif; ?>
+
+    <form method="POST" enctype="multipart/form-data">
+
+    <input type="text" name="title" placeholder="Book Title" value="<?php echo $title; ?>" required><br><br>
+    <input type="text" name="author" placeholder="Author Name" value="<?php echo $author; ?>" required><br><br>
+    <input type="text" id="price" name="price" placeholder="Original Price" value="<?php echo $price; ?>" oninput="calcFinalAdd()" required><br><br>
+    <input type="text" id="discount" name="discount" placeholder="Discount" value="<?php echo $discount; ?>" oninput="calcFinalAdd()" required><br><br>
+    <input type="text" id="final_price" name="final_price" placeholder="Final Price" value="<?php echo $final_price; ?>" readonly required><br><br>
+    <input type="text" name="quantity" placeholder="Quantity" value="<?php echo $quantity; ?>" required><br><br>
+    <textarea name="description" placeholder="Book Description" required><?php echo $description; ?></textarea><br><br>
