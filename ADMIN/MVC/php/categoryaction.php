@@ -21,3 +21,15 @@ if ($action === "add") {
     else echo "Failed";
     exit();
 }
+
+if ($action === "update") {
+    $id = (int)($_POST['id'] ?? 0);
+    $name = trim($_POST['name'] ?? '');
+
+    if ($id <= 0 || $name === "") exit("Invalid data");
+
+    $sql = "UPDATE categories SET name='$name' WHERE id=$id";
+    if ($conn->query($sql)) echo "Updated";
+    else echo "Failed";
+    exit();
+}
